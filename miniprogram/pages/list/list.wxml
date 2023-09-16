@@ -1,4 +1,21 @@
 <!--pages/list/list.wxml-->
+<button bind:tap="getInfo">发起GET请求</button>
+<button bind:tap="postInfo">发起POST请求</button>
+
+
+<view wx:for="{{arr1}}" wx:key="index" class="username">
+  索引为：{{index}} , item项为：{{item}}
+</view>
+<view wx:for="{{userList}}" wx:key="id">{{item.name}}
+</view>
+
+<block wx:if="{{true}}">
+  <view wx:if="{{sex===1}}">True</view>
+  <view wx:elif="{{sex===2}}">False</view>
+  <view wx:else>ambiguous</view>
+</block>
+<input value="{{msg}}" bindinput="inputHandler"></input>
+<view hidden="{{false}}">{{msg}}</view>
 <view class="container1">
   <view>A</view>
   <view>B</view>
@@ -11,7 +28,7 @@
   <view>C</view>
 </scroll-view>
 
-<swiper class="swiper-container" indicator-dots>
+<swiper class="swiper-container" indicator-dots indicator-color="white" indicator-active-color="gray" autoplay interval="3000" circular>
   <swiper-item>
     <view class="item">A</view>
   </swiper-item>
@@ -22,3 +39,32 @@
     <view class="item">C</view>
   </swiper-item>
 </swiper>
+
+<view>
+  手机号支持长按选中效果：
+  <text selectable>19819825480</text>
+</view>
+
+<rich-text nodes="<h1 style='color:red;'>标题</h1>"></rich-text>
+
+<!--pages/list2/list.wxml-->
+<view>~~~~~~~~~通过type指定按钮类型~~~~~~~~</view>
+<button>默认按钮</button>
+<button type="primary" bindtap="btnTapHandler">主色调按钮</button>
+<button type="warn" bind:tap="changeCount" data-number="{{3}}">警告按钮</button>
+
+<view>~~~~~~~~~size="mini"小尺寸按钮~~~~~~~~</view>
+<button size="mini">默认按钮</button>
+<button type="primary" size="mini">主色调按钮</button>
+<button type="warn" size="mini">警告按钮</button>
+
+<view>~~~~~~~~~plain镂空按钮~~~~~~~~~~~~~~</view>
+<button size="mini" plain>默认按钮</button>
+<button type="primary" size="mini" plain>主色调按钮</button>
+<button type="warn" size="mini" plain>警告按钮</button>
+<image src="/image/1.png" mode="heightFix"></image>
+<view>{{info}}</view>
+
+<image src="{{imgSrc}}" mode="widthFix"></image>
+<view>{{randomNum>=5?'随机数大于等于5':'随机数小于5'}}</view>
+<view>{{count}}</view>

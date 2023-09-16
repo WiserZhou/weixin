@@ -1,0 +1,15 @@
+<!--pages/first/first.wxml-->
+
+<!--轮播图区域-->
+<swiper class="swiper-container" indicator-dots indicator-color="white" indicator-active-color="gray" autoplay interval="3000" circular>
+  <swiper-item wx:for="{{SwiperList}}" wx:key="index">
+    <image src="{{item.urlImage}}"></image>
+  </swiper-item>
+
+</swiper>
+<!--四宫格区域-->
+<view class="grid-list">
+  <view class="grid-item" wx:for="{{gridList}}" wx:key="index" style="width: 230rpx; height: 60rpx; display: block; box-sizing: border-box; position: relative; left: 86rpx; top: 30rpx">
+    <text >{{item.name}}</text>
+  </view>
+</view>

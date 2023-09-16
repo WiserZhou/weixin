@@ -1,15 +1,45 @@
 {
   "pages": [
+    "pages/first/first",
     "pages/list/list",
     "pages/index/index",
     "pages/logs/logs"
-    
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#f11",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle": "black"
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#07C160",
+    "navigationBarTitleText": "拯瘤君",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#efefef",
+    "onReachBottomDistance": 80
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/first/first",
+        "text": "首页",
+        "iconPath": "./image/first.png",
+        "selectedIconPath": "./image/first-active.png"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "list",
+        "iconPath": "./image/list.png",
+        "selectedIconPath": "./image/list-active.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "logs",
+        "iconPath": "./image/logs.png",
+        "selectedIconPath": "./image/logs-active.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "user",
+        "iconPath": "./image/user.png",
+        "selectedIconPath": "./image/user-active.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
