@@ -18,7 +18,7 @@ Page({
         'https://k.sinaimg.cn/n/default/1_img/upload/3933d981/80/w1024h656/20230913/4da2-d894e74472e704d2b82ad3dcde168101.jpg/w640slw.jpg'
     }],
     //存放九宫格数据列表
-    gridList: []
+    gridList: [] as { index: number; name: string }[]
   },
 
   /**
@@ -49,22 +49,23 @@ Page({
       method: 'GET',
       success: (res) => {
         console.log(res)
+        const gridList = [{
+          index: 1,
+          name: "h1"
+        }, {
+          index: 2,
+          name: "h2"
+        },
+        {
+          index: 3,
+          name: "h3"
+        },
+        {
+          index: 4,
+          name: "h4"
+        }]
         this.setData({
-          gridList: [{
-            index: 1,
-            name: "h1"
-          }, {
-            index: 2,
-            name: "h2"
-          },
-          {
-            index: 3,
-            name: "h3"
-          },
-          {
-            index: 4,
-            name: "h4"
-          }]
+          gridList: gridList
         })
       }
     })

@@ -8,13 +8,39 @@ swiper image {
   height: 100%;
 }
 
-.grid-list{
+.grid-list {
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  height: max-content;
+  background-color: black;
 }
-.grid-item{
-  width: 100%;
+
+.grid-item {
+  background-color: red;
+  width: 50%;
+  height: 200 rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 4rpx solid #cc11eeef;
+  box-sizing: border-box;
 }
-.grid-item{
-  width: 100%;
+
+.grid-item text {
+  background-color: blue;
+  margin-top: 30 rpx;
+  font-size: 44 rpx;
+}
+
+.img-box {
+  display: flex;
+  padding: 20 rpx 10 rpx;
+  justify-content: space-around;
+
+}
+.img-box image{
+  width: 45%;
 }

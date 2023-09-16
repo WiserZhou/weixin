@@ -9,7 +9,13 @@
 </swiper>
 <!--四宫格区域-->
 <view class="grid-list">
-  <view class="grid-item" wx:for="{{gridList}}" wx:key="index" style="width: 230rpx; height: 60rpx; display: block; box-sizing: border-box; position: relative; left: 86rpx; top: 30rpx">
-    <text >{{item.name}}</text>
+  <view class="grid-item" wx:for="{{gridList}}" wx:key="index">
+    <text>{{item.name}}</text>
   </view>
+</view>
+<!--图片区域-->
+
+<view class="img-box">
+<image src="../../image/first.png" mode="widthFix"></image>
+<image src="../../image/list.png" mode="widthFix"></image>
 </view>
